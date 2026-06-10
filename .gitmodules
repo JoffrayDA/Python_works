@@ -1,0 +1,6 @@
+[submodule "100-pandas-puzzles"]
+	path = 100-pandas-puzzles
+	url = https://github.com/TexasThug/100-pandas-puzzles.git
+[submodule "numpy-100"]
+	path = numpy-100
+	url = https://github.com/TexasThug/numpy-100.git
