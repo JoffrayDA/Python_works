@@ -64,13 +64,18 @@ print("==========================================")
 #      "HT: 100€ | TTC: 120.0€"
 # (Utilise la f-string)
 
+def prix_ttc_flexible(prix_ht, taux = 0.20):
+    return prix_ht * (1 + taux)
+
 def afficher_prix(prix_ht):
-    
+    prix_ttc = prix_ttc_flexible(prix_ht)
+
+    return f"HT: {prix_ht}€ | TTC: {prix_ttc}€"
+
+print(afficher_prix(100))   # HT: 100€ | TTC: 120.0€
+print(afficher_prix(49.99)) # HT: 49.99€ | TTC: 59.988€
 
 
-# Test
-# print(afficher_prix(100))   # HT: 100€ | TTC: 120.0€
-# print(afficher_prix(49.99)) # HT: 49.99€ | TTC: 59.988€
 
 
 # ────────────────────────────────────────────────────────────
@@ -79,18 +84,17 @@ def afficher_prix(prix_ht):
 # Écris une fonction `analyse_ventes(ventes)` qui prend
 # une liste de chiffres de ventes journalières,
 # et retourne (min, max, moyenne) — dans cet ordre.
-# Utilise les fonctions built-in min(), max(), sum(), len().
-# Exemple : analyse_ventes([100, 200, 150, 300, 50])
-#           → (50, 300, 160.0)
 
 def analyse_ventes(ventes):
-    pass
+    mini = min(ventes)
+    maxi = max(ventes)
+    moyenne = sum(ventes) / len(ventes)
 
+    return mini, maxi, moyenne
 
-# Test
-# mini, maxi, moyenne = analyse_ventes([100, 200, 150, 300, 50])
-# print(mini, maxi, moyenne)  # 50 300 160.0
+mini, maxi, moyenne = analyse_ventes([100, 200, 150, 300, 50])
 
+print(mini, maxi, moyenne)  
 
 # ────────────────────────────────────────────────────────────
 # EXERCICE 6 — Docstring + robustesse

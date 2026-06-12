@@ -7,29 +7,35 @@ print(type(fruits))
     # Nombre d'éléments
 print(len(fruits))
     # Demander une saisie utilisateur
-input("yo >")
+fruit_prefere = input ("Quel est ton fruit préféré ? ")
     # Créer une suite de nombres 
-print(range(1,5))
+print(list(range(10,1)))
     # Méthode de liste
     # Ajoute un élément
-fruits.append("Poire")
+fruits.append("Goyave")
     # Retire un élément 
-fruits.remove("Kiwi")
+fruits.remove("Pomme")
     # Supprime le dernier élément 
 fruits.pop()
     # Trier la liste
 fruits.sort()
     # Trouver la position d'un élément 
-"python".find("t")
+i_banane = fruits.index("Banane")
+print(i_banane)
     # Chaine de caractères
-"python"
+mot = "Python"
     # Met en majuscule
-print("python".upper())
+majuscule = mot.upper()
+minuscule = mot.lower()
     # Remplace un texte 
-print("python".replace("py","my"))
+new_word = mot.replace("Bi", "Py")
     # Découpe en liste 
-print("py,thon".split(","))
+phrase = "Pomme,Kiwi,Poire"
+liste_decoupee = phrase.split(",") # Donne ['Pomme', 'Kiwi', 'Poire']
+print(liste_decoupee)
     # Fusionne une liste en texte 
-print(",".join(['py', 'thon']))
+fusion_txt = ", ".join(fruits)
+print(fusion_txt)
     # Supprime les espaces début ou fin 
-"  python  ".strip()
+phrase_avec_espaces = "   Bonjour   "
+phrase_propre = phrase_avec_espaces.strip()
